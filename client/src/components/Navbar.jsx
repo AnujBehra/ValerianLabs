@@ -8,9 +8,9 @@ export default function Navbar() {
   return (
     <header className="site-header">
       <div className="container nav-wrap">
-        <Link className="brand" to="/" onClick={closeMenu} aria-label="[Your Company Name] home">
-          <span className="brand-mark" aria-hidden="true"><span /><span /><span /></span>
-          <span>[YOUR COMPANY NAME]</span>
+        <Link className="brand" to="/" onClick={closeMenu} aria-label="Valerian Labs home">
+          <img className="brand-mark" src="/valerian-mark.svg" alt="" aria-hidden="true" />
+          <span>VALERIAN LABS</span>
         </Link>
         <button className="menu-toggle" type="button" aria-expanded={isOpen} onClick={() => setIsOpen(!isOpen)}>
           <span /><span /><span /><span className="sr-only">Toggle menu</span>

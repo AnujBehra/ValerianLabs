@@ -5,13 +5,13 @@ import { initAnalytics, trackEvent, trackPageview } from '../utils/analytics';
 const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://example.com').replace(/\/$/, '');
 
 const metadata = {
-  '/': ['Custom business software for growing companies', 'Thoughtful, custom business software that fits the way your team works.'],
-  '/services': ['What we build | Custom business software', 'Workflow, operations and reporting software designed around your business.'],
-  '/industries': ['Industries | Custom business software', 'Custom software for manufacturing, distribution, construction and growing SMEs.'],
-  '/about': ['How it works | Custom business software', 'A practical, collaborative process for turning messy workflows into useful software.'],
-  '/contact': ['Start a conversation | Custom business software', 'Tell us about your workflow and discover what thoughtful custom software can do.'],
-  '/privacy': ['Privacy policy | Custom business software', 'How we collect, use and protect information shared with us.'],
-  '/terms': ['Terms of use | Custom business software', 'Terms that apply when you use this website.'],
+  '/': ['Valerian Labs — Custom Business Software for Growing Companies', 'Valerian Labs builds custom CRM, ERP, inventory, dashboards and business software around the way your company works.'],
+  '/services': ['Valerian Labs — What We Build', 'Workflow, operations and reporting software designed around your business.'],
+  '/industries': ['Valerian Labs — Industries', 'Custom software for manufacturing, distribution, construction and growing SMEs.'],
+  '/about': ['Valerian Labs — How It Works', 'A practical, collaborative process for turning messy workflows into useful software.'],
+  '/contact': ['Valerian Labs — Start a Conversation', 'Tell us about your workflow and discover what thoughtful custom software can do.'],
+  '/privacy': ['Valerian Labs — Privacy Policy', 'How we collect, use and protect information shared with us.'],
+  '/terms': ['Valerian Labs — Terms of Use', 'Terms that apply when you use this website.'],
 };
 
 export default function RouteMetadata() {
@@ -19,7 +19,7 @@ export default function RouteMetadata() {
   useEffect(() => {
     initAnalytics();
     trackPageview(pathname);
-    const [title, description] = metadata[pathname] || ['Page not found | Custom business software', 'The page you requested could not be found.'];
+    const [title, description] = metadata[pathname] || ['Valerian Labs — Page Not Found', 'The page you requested could not be found.'];
     document.title = title;
     const trackContactLink = (event) => {
       const link = event.target.closest?.('a');
@@ -55,7 +55,7 @@ export default function RouteMetadata() {
     structuredData.textContent = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: '[YOUR COMPANY NAME]',
+      name: 'Valerian Labs',
       url: SITE_URL,
       description: 'Custom business software for growing companies.',
       areaServed: ['Raipur', 'Chhattisgarh', 'India'],

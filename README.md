@@ -96,7 +96,7 @@ Frontend variables belong in `client/.env`:
 
 The public POST endpoint has a basic configurable rate limit. Prisma handles parameterized database access, and server errors are logged server-side without exposing database details to clients.
 
-If `RESEND_API_KEY` and `LEAD_NOTIFICATION_EMAIL` are configured, a new lead also sends an HTML email notification through Resend. Set `RESEND_FROM_EMAIL` to a verified Resend sender in production; it defaults to `SaaSDog <onboarding@resend.dev>` for development. Email delivery is optional for local development. Email failures are logged server-side and never undo a successfully saved lead.
+If `RESEND_API_KEY` and `LEAD_NOTIFICATION_EMAIL` are configured, a new lead also sends an HTML email notification through Resend. Set `RESEND_FROM_EMAIL` to a verified Resend sender in production; it defaults to `Valerian Labs <onboarding@resend.dev>` for development. Email delivery is optional for local development. Email failures are logged server-side and never undo a successfully saved lead.
 
 ## Production deployment
 

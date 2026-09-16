@@ -1,6 +1,6 @@
 import { Resend } from 'resend';
 
-const defaultSender = 'SaaSDog <onboarding@resend.dev>';
+const defaultSender = 'Valerian Labs <onboarding@resend.dev>';
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -54,7 +54,7 @@ export async function sendLeadNotification(lead) {
     const { error } = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || defaultSender,
       to: LEAD_NOTIFICATION_EMAIL,
-      subject: `New Website Lead — ${lead.company}`,
+      subject: `New Website Lead — ${lead.company} | Valerian Labs`,
       html: createEmailHtml(lead),
     });
 

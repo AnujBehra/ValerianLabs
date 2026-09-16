@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-top">
         <Link className="brand footer-brand" to="/">
-          <span className="brand-mark" aria-hidden="true"><span /><span /><span /></span>
-          <span>[YOUR COMPANY NAME]</span>
+          <img className="brand-mark" src="/valerian-mark.svg" alt="" aria-hidden="true" />
+          <span>VALERIAN LABS</span>
         </Link>
         <p>Custom business software<br />for growing companies.</p>
         <div className="footer-links">
@@ -14,7 +14,7 @@ export default function Footer() {
           <Link to="/about">About</Link><Link to="/contact">Contact</Link>
         </div>
       </div>
-      <div className="container footer-bottom"><span>© 2024 [YOUR COMPANY NAME]. All rights reserved.</span><span><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link></span></div>
+      <div className="container footer-bottom"><span>© 2024 Valerian Labs. All rights reserved.</span><span><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link></span></div>
     </footer>
   );
 }
