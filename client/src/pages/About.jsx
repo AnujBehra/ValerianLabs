@@ -1,0 +1,2 @@
+import { ProcessSection, WhyCustom, CtaBand } from '../components/Sections';
+export default function About() { return <main className="inner-page"><section className="inner-hero section"><div className="container"><p className="eyebrow">How we work</p><h1>Thoughtful software for <em>real operations.</em></h1><p>We are a software studio for growing businesses that need their systems to reflect the way work actually happens.</p></div></section><ProcessSection /><WhyCustom /><CtaBand /></main>; }
