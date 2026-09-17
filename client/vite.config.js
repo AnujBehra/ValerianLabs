@@ -23,6 +23,7 @@ function seoFiles(siteUrl) {
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), 'VITE_');
   return {
+    base: '/ValerianLabs/',
     plugins: [react(), seoFiles(env.VITE_SITE_URL || 'https://example.com')],
   };
 });
